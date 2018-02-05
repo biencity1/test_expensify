@@ -63,11 +63,9 @@ export class ExpenseListFilters extends React.Component {
    }
 };
 
-const mapStateToProps = (state) => {
-   return {
+const mapStateToProps = (state) => ({
       filters:state.filters
-   };
-};
+});
 
 const mapDispatchToProps = (dispatch) => ({
    setTextFilter : (text) => dispatch(setTextFilter(text)),
