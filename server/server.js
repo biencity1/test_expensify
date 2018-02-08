@@ -6,12 +6,12 @@ const Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
 const publicPath = path.join(__dirname, '..', 'public');
-
+const port = process.env.PORT || 3000;
 
 app.use(serve(publicPath + '/'));
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
    console.log('server is up!');
 });
